@@ -1,0 +1,189 @@
+* {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    font-size: 18px;
+}
+
+/*
+=> Color options
+-------------------------------------
+- Very Dark Gray: hsl(0, 0%, 17%)
+- Dark Gray: hsl(0, 0%, 59%)
+
+=> Font Weight
+-------------------------------------
+- Weights: 400, 500, 700
+*/
+
+.app {
+    min-height: 100vh;
+}
+
+.ip--header {
+    display: flex;
+    height: 25vh;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(./images/pattern-bg.png);
+}
+
+.title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.ip--form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ip--form > input[type=text] {
+    width: 500px;
+    outline: none;
+    border: none;
+    padding: 15px 20px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.ip--submit {
+    padding: 23px;
+    border: none;
+    outline: none;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-image: url(./images/icon-arrow.svg);
+}
+
+#map {
+    position: relative;
+}
+
+.map--section {
+    min-height: 75vh;
+    min-width: 100vw;
+}
+
+.ip--info {
+    top: -40px;
+    width: 60%;
+    left: 20%;
+    z-index: 500;
+    position: absolute;
+    padding: 35px 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+}
+
+.info-sec {
+    z-index: 3;
+    height: 80px;
+}
+
+.bf {
+    padding-left: 20px;
+    border-left: hsl(0, 0%, 59%) 1px solid ;
+}
+
+.info-holder {
+    width: 210px;
+    padding-block: 10px;
+}
+
+.sub-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: hsl(0, 0%, 59%);
+}
+
+.sub-value {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+@media screen and (max-width: 675px) {
+    .ip--header {
+        height: 30vh;
+        padding-top: 5px;
+        padding-bottom: 0;
+        background-repeat: repeat;
+    }
+
+    .map--section {
+        min-height: 70vh;
+        min-width: 100vw;
+    }
+
+    .ip--info {
+        top: -60px;
+        left: 14%;
+        width: 72%;
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-sec {
+        height: 50px;
+    }
+    
+    .title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .ip--form > input[type=text] {
+        width: auto;
+        padding: 10px 15px;
+    }
+
+    .ip--submit {
+        padding: 18px;
+    }
+    
+    .bf {
+        padding-left: 0;
+        border-left: none;
+    }
+    
+    .info-holder {
+        width: 100%;
+        padding-block: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sub-title {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    
+    .sub-value {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+}
